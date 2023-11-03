@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-# import pymysql
-#
-# pymysql.install_as_MySQLdb()
 
 load_dotenv()
 
@@ -88,7 +85,6 @@ WSGI_APPLICATION = 'taskManagement.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('SQL_NAME'),
         'USER': os.environ.get('SQL_USER'),
