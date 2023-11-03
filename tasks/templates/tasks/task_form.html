@@ -1,0 +1,10 @@
+{% extends 'account/base.html' %} {% block title %}Create a Post{% endblock %}
+{% load crispy_forms_tags %} {% block content %}
+<form method="post">
+  {% csrf_token %}{{form|crispy}}
+  <button type="submit" class="btn btn-success">Confirm</button>
+  <br>
+  <br>
+  <a href="{% url 'account:home' %}" title="Back" >Back</a>
+</form>
+{% endblock %}

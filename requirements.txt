@@ -1,0 +1,9 @@
+asgiref==3.7.2
+crispy-bootstrap5==0.7
+Django==3.2.22
+django-crispy-forms==2.0
+psycopg2-binary==2.9.9
+python-dotenv==0.21.1
+pytz==2023.3.post1
+sqlparse==0.4.4
+typing_extensions==4.7.1

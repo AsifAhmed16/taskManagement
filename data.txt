@@ -1,0 +1,5 @@
+Python - 3.7
+Django - 3.2
+
+.env file example is shown in .env.example file
+

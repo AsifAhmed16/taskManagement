@@ -1,0 +1,31 @@
+{% extends 'account/base.html' %} {% block title %}Home Page{% endblock %}
+{% block content %}
+<div class="card mt-2">
+    <div class="card-header"><strong>USERNAME: @{{ task.author.username }}</strong></div>
+    <div class="card-body d-flex flex-row justify-content-between">
+        <div>
+            <h5 class="card-title">Task Name: {{task.title}}</h5>
+            <p>Description: {{task.description}}</p>
+            <p>Due Date: {{task.due_date|date:"Y-m-d"}}</p>
+        </div>
+        <div>
+            {% if user == task.author %}
+            <form method="get" action="{% url 'tasks:modify_task' task.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-warning">Update</button>
+            </form>
+            <br>
+            <form method="post" action="{% url 'tasks:destroy_task' task.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <a href="{% url 'account:home' %}" title="Back" >Back</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="card-footer text-muted">Task Created At: {{task.created_date}}</div>
+    {% if task.updated_date %}
+         <div class="card-footer text-muted">Last Updated At: {{task.updated_date}}</div>
+    {% endif %}
+</div>
+{% endblock %}

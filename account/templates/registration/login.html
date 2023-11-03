@@ -1,0 +1,27 @@
+{% extends 'account/base.html' %} {% block title %}Login{% endblock %}
+{% load crispy_forms_tags %} {% block content %}
+<br>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.level_tag == 'error' %}
+                <div class="alert alert-danger" role="alert">
+                    <strong>
+                        {{ message.message }}
+                    </strong>
+                </div>
+            {% elif message.level_tag == 'success' %}
+                <div class=" alert alert-success" role="alert">
+                    <strong>
+                        {{ message.message }}
+                    </strong>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+<br>
+<form method="post">
+  {% csrf_token %}{{form|crispy}}
+  <p>Don't have an account? Create one <a href="/register">Here</a>!</p>
+  <button type="submit" class="btn btn-success">Login</button>
+</form>
+{% endblock %}
