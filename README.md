@@ -126,20 +126,20 @@ Before you begin, ensure you have the following installed on your machine:
 
     ```bash
    
-   The project is deployed in the hosting service - PythonAnywhere.
+   The project is deployed in the hosting service - Render(A free hosting service).
    
     ```
 
 
 
-PythonAnyWhere:
-    [https://www.pythonanywhere.com/](https://www.pythonanywhere.com/)
+Render:
+    [https://dashboard.render.com/](https://dashboard.render.com/)
 
 
 
 ## Live Demo Link:
 
-- [https://www.asifahmed.pythonanywhere.com/](https://www.asifahmed.pythonanywhere.com/)
+- [https://taskmanagementapp-stky.onrender.com](https://taskmanagementapp-stky.onrender.com)
 
 
 ## Usage
